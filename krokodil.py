@@ -22,19 +22,19 @@ def questions():
 	tryz = 1
 	n = random.randint(1, maxn)
 	while guess != n:
-	    while True:
-	    	try:
-	    		print()
-	    		guess = int(input("Szerinted mennyi? :"))
-	    		break
- 	   	except ValueError:
-	   	 	print("Oops!  Ez nem szam..")
-	    if guess > n:
-	        print("kevesebb")
-	        tryz += 1
-	    if guess < n:
-	        print("tobb")
-	        tryz += 1
+		while True:
+			try:
+				print()
+				guess = int(input("Szerinted mennyi? :"))
+				break
+			except ValueError:
+				print("Oops!  Ez nem szam..")
+		if guess > n:
+			print("kevesebb")
+			tryz += 1
+		if guess < n:
+			print("tobb")
+			tryz += 1
         
 	print(f"Igen, {tryz}. alkalomra eltalaltad!")
 	if tryz == 1:
